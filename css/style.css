@@ -220,6 +220,25 @@ header-content > .header-logo {
     color: #c1d160;
 }
 
+main {
+    width: 100%;
+    padding-top: 100px;
+}
+
+main > .wrap {
+    width: 85%;
+    margin: 0 auto;
+}
+
+main > .wrap > .content-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > .wrap > .content-block > .content-item {
+    width: 280px;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
     header > .header-content {
         width: 90%;
