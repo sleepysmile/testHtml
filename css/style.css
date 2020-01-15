@@ -16,6 +16,7 @@ header {
 header > .header-content {
     width: 80%;
     height: 60%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -81,7 +82,6 @@ header-content > .header-logo {
 .menu-bar > .nav-content.active {
     transition-duration: 0.5s, 0s;
     transition-delay: 0s, 0s;
-    
     visibility: visible;
     z-index: 3;
     height: 100px;
@@ -89,7 +89,8 @@ header-content > .header-logo {
 
 .menu-bar > .nav-content > .nav-list {
     height: 100%;
-    width: 35%;
+    width: 55%;
+    max-width: 800px;
     display: flex;
     align-items: center;
 }
@@ -100,7 +101,7 @@ header-content > .header-logo {
     position: absolute;
     background-color: black;
     border-radius: 50%;
-    right: 20%;
+    right: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
