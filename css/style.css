@@ -314,8 +314,7 @@ main > .wrap > .content-block {
 .pagination-content > .pagination-list > .pre-pagination-item,
 .pagination-content > .pagination-list > .post-pagination-item {
     border: 1px solid #dedede;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin: 4px;
     padding: 10px;
     cursor: pointer;
 }
@@ -341,8 +340,7 @@ main > .wrap > .content-block {
 
 .pagination-content > .pagination-list > .pagination-item {
     padding: 10px;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin: 4px;
     text-align: center;
     border: 1px solid #dedede;
     cursor: pointer;
