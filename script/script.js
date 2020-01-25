@@ -17,6 +17,9 @@ function lazyLoadImage() {
             if(entry.isIntersecting) {
                 let image = entry.target;
                 image.src = image.dataset.src;
+                image.onload = function () {
+                    console.log(image)
+                };
                 imageObserver.unobserve(image)
             }   
         })

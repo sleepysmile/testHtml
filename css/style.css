@@ -361,6 +361,7 @@ main > .wrap > .content-block {
     margin-top: 12px;
     width: 100%;
     background-color: white;
+    border: 1px solid #dedede;
 }     
 
 .post > .image-preview {
@@ -403,6 +404,7 @@ main > .wrap > .content-block {
     align-self: flex-end;
     width: 100%;
     padding-top: 17px;
+    padding-bottom: 17px;
     border-top: 1px solid #dedede;
     display: flex;
     flex-wrap: wrap;
@@ -419,6 +421,90 @@ main > .wrap > .content-block {
     height: 45px;
     width: 105px; 
     border: 1px solid #e8e8e8;
+}
+
+.comment-post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: white;
+    border: 1px solid #dedede;
+}
+
+.comment-post > .comment-form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.comment-post > .comment-form > .content-form {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+    justify-content: space-between;
+
+}
+
+.comment-form > .comment-title {
+    color: #717171;
+}
+
+.comment-post > .comment-form > .content-form > textarea {
+    outline: none;
+    width: 85%;
+    resize: none;
+    background-color: #f6f6f7;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    padding: 10px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.comment-post > .comment-form > .content-form > button {
+    outline: none;
+    background-color: #f6f6f7;
+    color: #bbbbbc;
+    border-radius: 3px;
+    height: 45px;
+    width: 105px;
+    border: 1px solid #e8e8e8;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.comment-list {
+    width: 95%;
+    margin: 20px auto;
+}
+
+.comment-item {
+    margin-bottom: 20px;
+}
+
+.comment-avatar {
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-name {
+    color: #8c8c8c;
+    padding-left: 10px;
+}
+
+.comment-text {
+    color: #717171;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
@@ -444,9 +530,65 @@ main > .wrap > .content-block {
     .content-block > .content-item > .content-info > .content-tags {
         font-size: 13px;
     }
+
+    .comment-post > .comment-form > .content-form {
+        flex-direction: column;
+    }
+
+    .comment-post > .comment-form > .content-form > textarea {
+        width: calc(100% - 20px);
+    }
 }
 
 @media only screen and (max-width: 767px) {
+    header {
+        height: 120px;
+    }
+
+    header > .header-content {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    header > .header-content > .header-logo {
+        flex-grow: 1;
+        width: initial;
+        justify-content: flex-start;
+    }
+
+    header > .header-content > .menu-bar {
+        flex-grow: 1;
+        width: initial;
+        justify-content: flex-end;
+    }
+
+    .menu-bar > .nav-content.active {
+        height: 200px;
+    }
+
+    .menu-bar > .nav-content > .btn-close {
+        top: 30px;
+    }
+
+    .menu-bar > .nav-content > .nav-list > ul {
+        flex-direction: column;
+    }
+
+    .menu-bar > .nav-content > .nav-list > ul > li {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    header > .header-content > .search-bar {
+        flex-grow: 2;
+        width: initial;
+        height: initial;
+    }
+
+    header > .header-content > .user-info {
+        display: none;
+    }
+
     .content-block > .content-item {
         width: 100%;
     }
@@ -461,5 +603,17 @@ main > .wrap > .content-block {
 
     .post > .post-content {
         width: calc(100% - 56px);
+    }
+
+    .comment-post > .comment-form > .content-form {
+        flex-direction: column;
+    }
+
+    .comment-post > .comment-form > .content-form > textarea {
+        width: calc(100% - 20px);
+    }
+
+    .comment-post > .comment-form > .content-form > button {
+        width: 100%;
     }
 }
