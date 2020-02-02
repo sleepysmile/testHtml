@@ -265,6 +265,40 @@ main > .wrap {
     max-width: 1200px;
 }
 
+.breadcrumbs {
+    margin-bottom: 12px;
+    width: 100%;
+    display: flex;
+}
+
+.breadcrumbs > .breadcrubs-element {
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs > .breadcrubs-element a {
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    color: var(--text-gray-color);
+}
+
+.breadcrumbs > .breadcrubs-element a:hover {
+    color: var(--text-hover-color);
+}
+
+.breadcrumbs > .breadcrubs-element:not(:last-child)::after {
+    content: '\2022';
+    margin: 0px 5px 0px 5px;
+    color: var(--text-gray-color);
+}
+
+main > .wrap > div:nth-child(1) {
+    margin-top: 12px;
+}
+
 /* list */
 
 main > .wrap > .content-block {
@@ -278,7 +312,7 @@ main > .wrap > .content-block {
     background-color: var(--content-main-color);
     width: calc(25% - 26px);
     display: block;
-    margin: 12px;
+    margin: 0px 12px 12px 12px;
     text-decoration: none;
     border: 1px solid var(--border-color);
 }
@@ -390,7 +424,6 @@ main > .wrap > .content-block {
 
 .post {
     display: flex;
-    margin-top: 12px;
     width: 100%;
     background-color: var(--content-main-color);
     border: 1px solid var(--border-color);
@@ -542,7 +575,6 @@ main > .wrap > .content-block {
 .gallery-block {
     background-color: var(--content-main-color);
     border: 1px solid var(--border-color);
-    margin-top: 12px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
