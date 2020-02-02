@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    lazyLoadImage()
+    lazyLoadImageObs();
 })
 
 document.querySelector('.menu-btn').addEventListener('click', function () {
@@ -10,17 +10,16 @@ document.querySelector('.btn-close').addEventListener('click', function () {
     this.parentNode.classList.toggle('active')
 })
 
-function lazyLoadImage() {
-    const docImage = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+function lazyLoadImageObs() {
+    var docImage = document.querySelectorAll('img[data-src]');
+    var imageObserver = new IntersectionObserver((entries, imgObserver) => {
         entries.forEach((entry) => {
             if(entry.isIntersecting) {
                 let image = entry.target;
                 image.src = image.dataset.src;
-                image.onload = function () {
-                    console.log(image)
-                };
-                imageObserver.unobserve(image)
+                if (image.getAttribute('src') !== '') {
+                    imageObserver.unobserve(image)
+                }
             }   
         })
     });
