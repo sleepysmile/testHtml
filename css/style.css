@@ -9,6 +9,26 @@
     --menu-elem-color: black;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: var(--content-main-color);
+    border: 1px solid var(--border-color);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888888;
+    border: 1px solid var(--border-color);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #888888;
+    border: 1px solid var(--border-color);
+}
+
 body {
     margin: 0;
     background-color: var(--main-bg-color);
