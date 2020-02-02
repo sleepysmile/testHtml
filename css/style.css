@@ -195,7 +195,7 @@ header > .header-content {
     justify-content: flex-end;
 }
 
-.header-content > .search-bar > .search-form > .search-input {
+.search-form > .search-input {
     height: 35px;
     width: 100%;
     padding: 0;
@@ -206,7 +206,7 @@ header > .header-content {
     padding-left: 5px;
 }
 
-.header-content > .search-bar > .search-form > .search-button {
+.search-form > .search-button {
     height: 35px;
     margin: 0;
     z-index: 2;
@@ -219,11 +219,11 @@ header > .header-content {
     border-bottom: none;
 }
 
-.header-content > .search-bar > .search-form > .search-button:focus {
+.search-form > .search-button:focus {
     outline: none;
 }
 
-.header-content > .search-bar > .search-form > .search-input:focus {
+.search-form > .search-input:focus {
     outline: none;
 }
 
@@ -301,7 +301,7 @@ main > .wrap > div:nth-child(1) {
 
 /* list */
 
-main > .wrap > .content-block {
+.content-block {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -641,6 +641,28 @@ main > .wrap > .content-block {
     right: 0;
 }
 
+.search-content {
+    background-color: var(--content-main-color);
+    border: 1px solid var(--border-color);
+}
+
+.search-content > .search-form {
+    display: flex;
+    margin: 10px auto;
+    width: 95%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search-content > .content-block {
+    width: 97%;
+    margin: 10px auto;
+}
+
+.search-content .search-button {
+    z-index: 1;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
     header > .header-content {
         width: 90%;
@@ -758,5 +780,9 @@ main > .wrap > .content-block {
     .gallery-item {
         width: 100%; 
         margin: 6px;
+    }
+
+    main > .wrap > div:nth-child(1) {
+        margin-top: 32px;
     }
 }
