@@ -627,6 +627,14 @@ main > .wrap > div:nth-child(1) {
     max-height: 1200px;
 }
 
+.item-content video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    max-height: 550px;
+    outline: none;
+}
+
 .link-item {
     position: absolute;
     height: 100%;
