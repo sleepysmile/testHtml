@@ -26,5 +26,5 @@ function lazyLoadImageObs() {
 
     docImage.forEach(element => {
         imageObserver.observe(element);
-    })
+    });
 }
